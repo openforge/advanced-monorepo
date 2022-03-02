@@ -1,17 +1,17 @@
 {
-    "root": "apps/example-app-e2e",
-    "sourceRoot": "apps/example-app-e2e/src",
+    "root": "apps/startup-glossary-e2e",
+    "sourceRoot": "apps/startup-glossary-e2e/src",
     "projectType": "application",
     "targets": {
         "e2e": {
             "executor": "@nrwl/cypress:cypress",
             "options": {
-                "cypressConfig": "apps/example-app-e2e/cypress.json",
-                "devServerTarget": "example-app:serve:development"
+                "cypressConfig": "apps/startup-glossary-e2e/cypress.json",
+                "devServerTarget": "startup-glossary:serve:development"
             },
             "configurations": {
                 "production": {
-                    "devServerTarget": "example-app:serve:production"
+                    "devServerTarget": "startup-glossary:serve:production"
                 }
             }
         },
@@ -19,10 +19,10 @@
             "executor": "@nrwl/linter:eslint",
             "outputs": ["{options.outputFile}"],
             "options": {
-                "lintFilePatterns": ["apps/example-app-e2e/**/*.{js,ts}"]
+                "lintFilePatterns": ["apps/startup-glossary-e2e/**/*.{js,ts}"]
             }
         }
     },
     "tags": [],
-    "implicitDependencies": ["example-app"]
+    "implicitDependencies": ["startup-glossary"]
 }
