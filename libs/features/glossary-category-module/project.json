@@ -1,0 +1,23 @@
+{
+    "root": "libs/features/glossary-category-module",
+    "sourceRoot": "libs/features/glossary-category-module/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["libs/features/glossary-category-module/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/features/glossary-category-module"],
+            "options": {
+                "jestConfig": "libs/features/glossary-category-module/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}

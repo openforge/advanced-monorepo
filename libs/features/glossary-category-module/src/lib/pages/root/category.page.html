@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="Back"> </ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ categorySelected.title }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <section>
+        <ion-img src="{{ categorySelected.icon }}"></ion-img>
+        <h2>You have learned</h2>
+        <h2>
+            <span>{{ categorySelected.termsLearned }}</span> out of <span>{{ categorySelected.termsTotal }}</span> Terms
+        </h2>
+        <p>Tap "Learn New Term" to continue.</p>
+        <ion-button class="primary" (click)="learnNewTerm()">Learn New Term</ion-button>
+        <ion-button class="secondary" (click)="alreadyLearned()" fill="outline">What I've Learned</ion-button>
+    </section>
+</ion-content>

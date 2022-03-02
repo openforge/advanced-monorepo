@@ -1,0 +1,15 @@
+{
+    "root": "libs/data-access/services/",
+    "sourceRoot": "libs/data-access/services/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["libs/data-access/services/**/*.{js,ts}"]
+            }
+        }
+    },
+    "tags": []
+}

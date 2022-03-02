@@ -1,8 +1,14 @@
 {
     "version": 2,
     "projects": {
+        "data-access-services": "libs/data-access/services",
+        "features-glossary-category-module": "libs/features/glossary-category-module",
+        "features-glossary-home-module": "libs/features/glossary-home-module",
         "shared": "libs/shared",
         "startup-glossary": "apps/startup-glossary",
-        "startup-glossary-e2e": "apps/startup-glossary-e2e"
+        "startup-glossary-e2e": "apps/startup-glossary-e2e",
+        "ui-modals": "libs/ui/modals",
+        "util-directives": "libs/util/directives",
+        "util-pipes": "libs/util/pipes"
     }
 }

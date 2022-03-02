@@ -1,0 +1,23 @@
+{
+    "root": "libs/ui/modals",
+    "sourceRoot": "libs/ui/modals/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["libs/ui/modals/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/ui/modals"],
+            "options": {
+                "jestConfig": "libs/ui/modals/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}

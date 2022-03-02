@@ -1,0 +1,8 @@
+<ion-item [ngClass]="{ 'last-item': isLastItem }">
+    <ion-img [src]="category.icon" slot="start"></ion-img>
+    <ion-label>
+        <h2>{{ category.title }}</h2>
+        <h3>{{ category.termsLearned }}/{{ category.termsTotal }} Terms Learned</h3>
+    </ion-label>
+    <ion-button slot="end" (click)="viewItem()" fill="clear">View</ion-button>
+</ion-item>

@@ -1,0 +1,23 @@
+{
+    "root": "libs/util/directives",
+    "sourceRoot": "libs/util/directives/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["libs/util/directives/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/util/directives"],
+            "options": {
+                "jestConfig": "libs/util/directives/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}

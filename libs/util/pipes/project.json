@@ -1,0 +1,23 @@
+{
+    "root": "libs/util/pipes",
+    "sourceRoot": "libs/util/pipes/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["libs/util/pipes/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/util/pipes"],
+            "options": {
+                "jestConfig": "libs/util/pipes/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}

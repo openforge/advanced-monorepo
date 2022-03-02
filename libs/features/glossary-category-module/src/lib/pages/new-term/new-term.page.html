@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="Back"> </ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ categorySelected.title }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <section>
+        <h2>Net Worth</h2>
+        <p><strong>[ net wurth ]</strong></p>
+        <p>The total wealth of an individual, company or household, taking account of all financial assets and liabilities.</p>
+        <p><strong>For example:</strong></p>
+        <p class="example">"With a net worth of $150 million, he is among the richest golfers in the sports today."</p>
+    </section>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button (click)="newTerm()">New Term</ion-button>
+</ion-footer>

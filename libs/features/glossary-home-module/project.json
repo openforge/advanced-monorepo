@@ -1,0 +1,23 @@
+{
+    "root": "libs/features/glossary-home-module",
+    "sourceRoot": "libs/features/glossary-home-module/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["libs/features/glossary-home-module/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/features/glossary-home-module"],
+            "options": {
+                "jestConfig": "libs/features/glossary-home-module/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}
