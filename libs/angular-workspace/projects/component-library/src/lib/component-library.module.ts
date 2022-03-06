@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
-import { ComponentLibraryComponent } from './component-library.component';
+// import { ComponentLibraryComponent } from './component-library.component';
 
 @NgModule({
-    declarations: [ComponentLibraryComponent],
+    declarations: [],
     imports: [IonicModule],
-    exports: [ComponentLibraryComponent],
+    exports: [],
 })
 export class ComponentLibraryModule {}
