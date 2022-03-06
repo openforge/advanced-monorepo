@@ -66,6 +66,7 @@
         "@capacitor/status-bar": "1.0.6",
         "@ionic/angular": "^5.5.2",
         "@nrwl/eslint-plugin-nx": "^13.2.1",
+        "@stencil/angular-output-target": "^0.4.0",
         "eslint-plugin-import": "^2.25.4",
         "eslint-plugin-jsdoc": "^37.8.0",
         "eslint-plugin-prefer-arrow": "^1.2.3",
