@@ -1,11 +1,11 @@
-import { HTMLElement, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
+import { attachShadow, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
 import { h as hasShadowDom } from './helpers.js';
 
 let Button = class extends HTMLElement {
   constructor() {
     super();
     this.__registerHost();
-    this.__attachShadow();
+    attachShadow(this);
     this.myFocus = createEvent(this, "myFocus", 7);
     this.myBlur = createEvent(this, "myBlur", 7);
     this.inItem = false;
@@ -104,9 +104,6 @@ Button = /*@__PURE__*/ proxyCustomElement(Button, [1, "my-button", {
     "type": [1]
   }]);
 function defineCustomElement$1() {
-  if (typeof customElements === "undefined") {
-    return;
-  }
   const components = ["my-button"];
   components.forEach(tagName => { switch (tagName) {
     case "my-button":

@@ -1,11 +1,11 @@
-import { HTMLElement, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
+import { attachShadow, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
 import { f as findItemLabel, r as renderHiddenInput } from './helpers2.js';
 
 let Checkbox = class extends HTMLElement {
   constructor() {
     super();
     this.__registerHost();
-    this.__attachShadow();
+    attachShadow(this);
     this.myChange = createEvent(this, "myChange", 7);
     this.myFocus = createEvent(this, "myFocus", 7);
     this.myBlur = createEvent(this, "myBlur", 7);
@@ -103,9 +103,6 @@ Checkbox = /*@__PURE__*/ proxyCustomElement(Checkbox, [1, "my-checkbox", {
     "value": [1]
   }]);
 function defineCustomElement$1() {
-  if (typeof customElements === "undefined") {
-    return;
-  }
   const components = ["my-checkbox"];
   components.forEach(tagName => { switch (tagName) {
     case "my-checkbox":

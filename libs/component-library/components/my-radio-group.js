@@ -1,4 +1,4 @@
-import { HTMLElement, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
+import { createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
 
 let RadioGroup = class extends HTMLElement {
   constructor() {
@@ -59,9 +59,6 @@ RadioGroup = /*@__PURE__*/ proxyCustomElement(RadioGroup, [0, "my-radio-group", 
     "value": [1032]
   }]);
 function defineCustomElement$1() {
-  if (typeof customElements === "undefined") {
-    return;
-  }
   const components = ["my-radio-group"];
   components.forEach(tagName => { switch (tagName) {
     case "my-radio-group":

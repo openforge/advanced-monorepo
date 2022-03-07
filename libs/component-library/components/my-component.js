@@ -1,4 +1,4 @@
-import { HTMLElement, createEvent, h, proxyCustomElement } from '@stencil/core/internal/client';
+import { attachShadow, createEvent, h, proxyCustomElement } from '@stencil/core/internal/client';
 
 const myComponentCss = ":host{display:block}";
 
@@ -6,7 +6,7 @@ let MyComponent$1 = class extends HTMLElement {
   constructor() {
     super();
     this.__registerHost();
-    this.__attachShadow();
+    attachShadow(this);
     this.myCustomEvent = createEvent(this, "myCustomEvent", 7);
   }
   emitCustomEvent() {
@@ -28,9 +28,6 @@ MyComponent$1 = /*@__PURE__*/ proxyCustomElement(MyComponent$1, [1, "my-componen
     "kidsNames": [16]
   }]);
 function defineCustomElement$1() {
-  if (typeof customElements === "undefined") {
-    return;
-  }
   const components = ["my-component"];
   components.forEach(tagName => { switch (tagName) {
     case "my-component":

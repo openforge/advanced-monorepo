@@ -1,4 +1,4 @@
-import { HTMLElement, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
+import { createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
 
 let Input = class extends HTMLElement {
   constructor() {
@@ -197,9 +197,6 @@ Input = /*@__PURE__*/ proxyCustomElement(Input, [2, "my-input", {
     "getInputElement": [64]
   }]);
 function defineCustomElement$1() {
-  if (typeof customElements === "undefined") {
-    return;
-  }
   const components = ["my-input"];
   components.forEach(tagName => { switch (tagName) {
     case "my-input":

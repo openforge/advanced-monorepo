@@ -1,11 +1,11 @@
-import { HTMLElement, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
+import { attachShadow, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
 import { f as findItemLabel } from './helpers2.js';
 
 let Radio = class extends HTMLElement {
   constructor() {
     super();
     this.__registerHost();
-    this.__attachShadow();
+    attachShadow(this);
     this.myStyle = createEvent(this, "myStyle", 7);
     this.myFocus = createEvent(this, "myFocus", 7);
     this.myBlur = createEvent(this, "myBlur", 7);
@@ -91,9 +91,6 @@ Radio = /*@__PURE__*/ proxyCustomElement(Radio, [1, "my-radio", {
     "checked": [32]
   }]);
 function defineCustomElement$1() {
-  if (typeof customElements === "undefined") {
-    return;
-  }
   const components = ["my-radio"];
   components.forEach(tagName => { switch (tagName) {
     case "my-radio":

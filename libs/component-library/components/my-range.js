@@ -1,11 +1,11 @@
-import { HTMLElement, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
+import { attachShadow, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
 import { c as clamp, d as debounceEvent, r as renderHiddenInput } from './helpers.js';
 
 let Range = class extends HTMLElement {
   constructor() {
     super();
     this.__registerHost();
-    this.__attachShadow();
+    attachShadow(this);
     this.myChange = createEvent(this, "myChange", 7);
     this.myStyle = createEvent(this, "myStyle", 7);
     this.myFocus = createEvent(this, "myFocus", 7);
@@ -323,9 +323,6 @@ Range = /*@__PURE__*/ proxyCustomElement(Range, [1, "my-range", {
     "pressedKnob": [32]
   }]);
 function defineCustomElement$1() {
-  if (typeof customElements === "undefined") {
-    return;
-  }
   const components = ["my-range"];
   components.forEach(tagName => { switch (tagName) {
     case "my-range":

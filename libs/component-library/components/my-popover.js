@@ -1,4 +1,4 @@
-import { HTMLElement, createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
+import { createEvent, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
 import { e as eventMethod } from './helpers.js';
 
 let Popover = class extends HTMLElement {
@@ -94,9 +94,6 @@ Popover = /*@__PURE__*/ proxyCustomElement(Popover, [2, "my-popover", {
     "onWillDismiss": [64]
   }]);
 function defineCustomElement$1() {
-  if (typeof customElements === "undefined") {
-    return;
-  }
   const components = ["my-popover"];
   components.forEach(tagName => { switch (tagName) {
     case "my-popover":

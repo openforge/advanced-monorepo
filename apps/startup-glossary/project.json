@@ -6,16 +6,23 @@
     "targets": {
         "build": {
             "executor": "@angular-devkit/build-angular:browser",
-            "outputs": ["{options.outputPath}"],
+            "outputs": [
+                "{options.outputPath}"
+            ],
             "options": {
+                "preserveSymlinks": true,
                 "outputPath": "dist/apps/startup-glossary",
                 "index": "apps/startup-glossary/src/index.html",
                 "main": "apps/startup-glossary/src/main.ts",
                 "polyfills": "apps/startup-glossary/src/polyfills.ts",
                 "tsConfig": "apps/startup-glossary/tsconfig.json",
                 "inlineStyleLanguage": "scss",
-                "assets": ["apps/startup-glossary/src/assets"],
-                "styles": ["apps/startup-glossary/src/global.scss"],
+                "assets": [
+                    "apps/startup-glossary/src/assets"
+                ],
+                "styles": [
+                    "apps/startup-glossary/src/global.scss"
+                ],
                 "scripts": []
             },
             "configurations": {
@@ -72,12 +79,17 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["apps/startup-glossary/src/**/*.ts", "apps/startup-glossary/src/**/*.html"]
+                "lintFilePatterns": [
+                    "apps/startup-glossary/src/**/*.ts",
+                    "apps/startup-glossary/src/**/*.html"
+                ]
             }
         },
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/apps/startup-glossary"],
+            "outputs": [
+                "coverage/apps/startup-glossary"
+            ],
             "options": {
                 "jestConfig": "apps/startup-glossary/jest.config.js",
                 "passWithNoTests": true
@@ -85,9 +97,14 @@
         },
         "stylelint": {
             "executor": "nx-stylelint:lint",
-            "outputs": ["{options.outputFile}"],
+            "outputs": [
+                "{options.outputFile}"
+            ],
             "options": {
-                "lintFilePatterns": ["apps/startup-glossary/**/*.css", "apps/startup-glossary/**/*.scss"]
+                "lintFilePatterns": [
+                    "apps/startup-glossary/**/*.css",
+                    "apps/startup-glossary/**/*.scss"
+                ]
             }
         }
     },

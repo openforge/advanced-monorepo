@@ -51,8 +51,8 @@
             "@company-name/shared": [
                 "libs/shared/src/index.ts"
             ],
-            "@company-name/angular-workspace": [
-                "libs/angular-workspace/projects/component-library/src/public-api.ts"
+            "@company-name/component-library-angular": [
+                "libs/component-library-angular/src/index.ts"
             ]
         }
     },
