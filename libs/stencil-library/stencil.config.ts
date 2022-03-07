@@ -5,7 +5,7 @@ export const config: Config = {
   outputTargets: [
     angular({
       componentCorePackage: `stencil-library`,
-      directivesProxyFile: `../angular-workspace/projects/component-library/src/lib/stencil-generated/component-library.components.ts`,
+      directivesProxyFile: `../angular-workspace/projects/component-library/src/lib/stencil-generated/components.ts`,
     }),
     {
       type: 'dist',
