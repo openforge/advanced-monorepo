@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
-// import { ComponentLibraryComponent } from './component-library.component';
+// import { MyComponent } from './stencil-generated/component-library.components';
+import { NameComponent } from './test.component';
 
 @NgModule({
-    declarations: [],
+    declarations: [NameComponent],
     imports: [IonicModule],
-    exports: [],
+    exports: [NameComponent],
 })
 export class ComponentLibraryModule {}

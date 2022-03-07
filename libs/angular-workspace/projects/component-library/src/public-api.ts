@@ -1,1 +1,1 @@
-export * from './lib/stencil-generated/components';
+export { ComponentLibraryModule } from './lib/component-library.module';

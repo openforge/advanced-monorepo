@@ -4,7 +4,7 @@ export const config: Config = {
   namespace: 'demo',
   outputTargets: [
     angular({
-      componentCorePackage: `your-stencil-library-name`,
+      componentCorePackage: `stencil-library`,
       directivesProxyFile: `../angular-workspace/projects/component-library/src/lib/stencil-generated/component-library.components.ts`,
     }),
     {
@@ -12,7 +12,8 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     {
-      type: 'dist-custom-elements',
+      type: 'www',
+      serviceWorker: null, // disable service workers
     },
   ],
 };
