@@ -1,50 +1,50 @@
-import { Component, Prop, h, Event, EventEmitter } from '@stencil/core';
+import { Component, Prop, h, Event, State, EventEmitter } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
-  shadow: true,
+    tag: 'my-component',
+    styleUrl: 'my-component.css',
+    shadow: true,
 })
 export class MyComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
+    /**
+     * The items array
+     */
+    @Prop() items: any[];
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
+    /**
+     * Testing an event without value
+     */
+    @Event() viewItemEvent: EventEmitter<any>;
 
-  /**
-   * The last name
-   */
-  @Prop() last: string;
+    /**
+     * The array that is displayed
+     */
+    @State() animes = [];
 
-  /**
-   * The age
-   */
-  @Prop() age: number;
+    componentWillLoad() {
+        this.items.map(item => {
+            this.animes.push(
+                <ion-item>
+                    <ion-img src={item.icon} slot="start"></ion-img>
+                    <ion-label>
+                        <h2>{item.title}</h2>
+                        <h3>
+                            {item.termsLearned}/{item.termsTotal} Terms Learned
+                        </h3>
+                    </ion-label>
+                    <ion-button slot="end" onClick={() => this.viewItem(item)} fill="clear">
+                        View
+                    </ion-button>
+                </ion-item>
+            );
+        });
+    }
 
-  /**
-   * The array of child names
-   */
-  @Prop() kidsNames: string[];
+    viewItem(item) {
+        this.viewItemEvent.emit(item);
+    }
 
-  /**
-   * Testing an event without value
-   */
-  @Event() myCustomEvent: EventEmitter<number>;
-
-  emitCustomEvent() {
-    this.myCustomEvent.emit(5);
-  }
-
-  private getText(): string {
-    return `${this.first} ${this.middle} ${this.last}`;
-  }
-
-  render() {
-    return <div onClick={this.emitCustomEvent.bind(this)}>Hello, World! I'm {this.getText()}</div>;
-  }
+    render() {
+        return this.animes;
+    }
 }

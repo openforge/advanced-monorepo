@@ -5,19 +5,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <my-component first="YAY" last="Compiler"></my-component>
     <section>
         <h2>What would you like to learn today?</h2>
         <p>Select a category below to view its terms.</p>
     </section>
     <ion-list>
-        <ion-item *ngFor="let item of items; let last = last" [ngClass]="{ 'last-item': last }">
-            <ion-img [src]="item.icon" slot="start"></ion-img>
-            <ion-label>
-                <h2>{{ item.title }}</h2>
-                <h3>{{ item.termsLearned }}/{{ item.termsTotal }} Terms Learned</h3>
-            </ion-label>
-            <ion-button slot="end" (click)="viewItem(item)" fill="clear">View</ion-button>
-        </ion-item>
+        <my-component [items]="items" (viewItemEvent)="viewItem($event)"></my-component>
     </ion-list>
 </ion-content>

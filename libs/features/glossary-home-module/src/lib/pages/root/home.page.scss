@@ -11,17 +11,4 @@ ion-content section {
 
 ion-content ion-list {
     padding: 0;
-    border-bottom: 1px solid rgb(0 0 0 / 13%);
-    ion-img {
-        width: 45px;
-        height: 45px;
-    }
-
-    ion-button {
-        text-transform: initial;
-    }
-
-    ion-item.last-item {
-        --border-style: none;
-    }
 }

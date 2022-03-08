@@ -60,23 +60,23 @@ export class MyCheckbox {
 import { MyComponent as IMyComponent } from 'component-library/dist/types/components/my-component/my-component';
 export declare interface MyComponent extends Components.MyComponent {}
 @ProxyCmp({
-  inputs: ['age', 'first', 'kidsNames', 'last', 'middle']
+  inputs: ['items']
 })
 @Component({
   selector: 'my-component',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['age', 'first', 'kidsNames', 'last', 'middle'],
-  outputs: ['myCustomEvent']
+  inputs: ['items'],
+  outputs: ['viewItemEvent']
 })
 export class MyComponent {
   /** Testing an event without value */
-  myCustomEvent!: IMyComponent['myCustomEvent'];
+  viewItemEvent!: IMyComponent['viewItemEvent'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['myCustomEvent']);
+    proxyOutputs(this, this.el, ['viewItemEvent']);
   }
 }
 

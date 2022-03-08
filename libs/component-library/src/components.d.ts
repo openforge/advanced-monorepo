@@ -101,25 +101,9 @@ export namespace Components {
     }
     interface MyComponent {
         /**
-          * The age
+          * The items array
          */
-        "age": number;
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The array of child names
-         */
-        "kidsNames": string[];
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "items": any[];
     }
     interface MyInput {
         /**
@@ -565,29 +549,13 @@ declare namespace LocalJSX {
     }
     interface MyComponent {
         /**
-          * The age
+          * The items array
          */
-        "age"?: number;
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The array of child names
-         */
-        "kidsNames"?: string[];
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "items"?: any[];
         /**
           * Testing an event without value
          */
-        "onMyCustomEvent"?: (event: CustomEvent<number>) => void;
+        "onViewItemEvent"?: (event: CustomEvent<any>) => void;
     }
     interface MyInput {
         /**
