@@ -5,25 +5,44 @@ import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
 import { Components } from 'component-library';
 
-import { MyComponent as IMyComponent } from 'component-library/dist/types/components/my-component/my-component';
-export declare interface MyComponent extends Components.MyComponent {}
+import { CategoryListItemComponent as ICategoryListItemComponent } from 'component-library/dist/types/components/category-list-item/category-list-item';
+export declare interface CategoryListItem extends Components.CategoryListItem {}
 @ProxyCmp({
-  inputs: ['items']
+  inputs: ['category']
 })
 @Component({
-  selector: 'my-component',
+  selector: 'category-list-item',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['items'],
+  inputs: ['category'],
   outputs: ['viewItemEvent']
 })
-export class MyComponent {
+export class CategoryListItem {
   /** Testing an event without value */
-  viewItemEvent!: IMyComponent['viewItemEvent'];
+  viewItemEvent!: ICategoryListItemComponent['viewItemEvent'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs(this, this.el, ['viewItemEvent']);
+  }
+}
+
+
+export declare interface GlossaryTerm extends Components.GlossaryTerm {}
+@ProxyCmp({
+  inputs: ['term']
+})
+@Component({
+  selector: 'glossary-term',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['term']
+})
+export class GlossaryTerm {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
   }
 }

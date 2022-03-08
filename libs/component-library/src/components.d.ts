@@ -6,44 +6,65 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface CategoryListItem {
         /**
           * The items array
          */
-        "items": any[];
+        "category": any;
+    }
+    interface GlossaryTerm {
+        /**
+          * The items array
+         */
+        "term": any;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLCategoryListItemElement extends Components.CategoryListItem, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLCategoryListItemElement: {
+        prototype: HTMLCategoryListItemElement;
+        new (): HTMLCategoryListItemElement;
+    };
+    interface HTMLGlossaryTermElement extends Components.GlossaryTerm, HTMLStencilElement {
+    }
+    var HTMLGlossaryTermElement: {
+        prototype: HTMLGlossaryTermElement;
+        new (): HTMLGlossaryTermElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "category-list-item": HTMLCategoryListItemElement;
+        "glossary-term": HTMLGlossaryTermElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface CategoryListItem {
         /**
           * The items array
          */
-        "items"?: any[];
+        "category"?: any;
         /**
           * Testing an event without value
          */
         "onViewItemEvent"?: (event: CustomEvent<any>) => void;
     }
+    interface GlossaryTerm {
+        /**
+          * The items array
+         */
+        "term"?: any;
+    }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "category-list-item": CategoryListItem;
+        "glossary-term": GlossaryTerm;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "category-list-item": LocalJSX.CategoryListItem & JSXBase.HTMLAttributes<HTMLCategoryListItemElement>;
+            "glossary-term": LocalJSX.GlossaryTerm & JSXBase.HTMLAttributes<HTMLGlossaryTermElement>;
         }
     }
 }

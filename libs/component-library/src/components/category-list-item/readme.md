@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type    | Default     |
-| -------- | --------- | --------------- | ------- | ----------- |
-| `items`  | --        | The items array | `any[]` | `undefined` |
+| Property   | Attribute  | Description     | Type  | Default     |
+| ---------- | ---------- | --------------- | ----- | ----------- |
+| `category` | `category` | The items array | `any` | `undefined` |
 
 
 ## Events
