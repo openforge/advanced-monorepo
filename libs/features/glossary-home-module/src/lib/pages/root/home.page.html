@@ -5,18 +5,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
     <section>
         <h2>What would you like to learn today?</h2>
         <p>Select a category below to view its terms.</p>
     </section>
     <ion-list>
-        <ion-item *ngFor="let item of items; let last = last" [ngClass]="{ 'last-item': last }">
-            <ion-img [src]="item.icon" slot="start"></ion-img>
-            <ion-label>
-                <h2>{{ item.title }}</h2>
-                <h3>{{ item.termsLearned }}/{{ item.termsTotal }} Terms Learned</h3>
-            </ion-label>
-            <ion-button slot="end" (click)="viewItem(item)" fill="clear">View</ion-button>
-        </ion-item>
+        <ng-container *ngFor="let item of items">
+            <category-list-item [category]="item" (viewItemEvent)="viewItem($event)"></category-list-item>
+        </ng-container>
     </ion-list>
 </ion-content>

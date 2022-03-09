@@ -1,0 +1,11 @@
+:host {
+    display: block;
+}
+
+section {
+    padding: 24px;
+}
+
+p.example {
+    font-style: italic;
+}

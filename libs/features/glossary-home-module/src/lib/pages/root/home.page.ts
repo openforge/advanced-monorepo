@@ -18,7 +18,7 @@ export class HomePageComponent {
         this.items = this.categoryService.categories;
     }
 
-    viewItem(item) {
-        void this.route.navigateByUrl('/category', { state: { category: item.title } });
+    viewItem(ev) {
+        void this.route.navigateByUrl('/category', { state: { category: ev.detail.title } });
     }
 }

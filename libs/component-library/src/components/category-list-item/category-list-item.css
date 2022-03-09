@@ -1,0 +1,12 @@
+:host {
+    display: block;
+}
+
+ion-img {
+    width: 45px;
+    height: 45px;
+}
+
+ion-button {
+    text-transform: initial;
+}

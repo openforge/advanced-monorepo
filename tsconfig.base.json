@@ -16,6 +16,7 @@
         ],
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
+        "preserveSymlinks": true,
         "baseUrl": ".",
         "paths": {
             "@company-name/data-access/glossary": [
@@ -48,8 +49,11 @@
             "@company-name/util/pipes": [
                 "libs/util/pipes/src/index.ts"
             ],
-            "@company-name/shared": [
-                "libs/shared/src/index.ts"
+            "@company-name/component-library-angular": [
+                "libs/component-library-angular/src/index.ts"
+            ],
+            "@angular/*": [
+                "./node_modules/@angular/*"
             ]
         }
     },
