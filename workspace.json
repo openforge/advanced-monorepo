@@ -4,10 +4,91 @@
         "data-access-services": "libs/data-access/services",
         "features-glossary-category-module": "libs/features/glossary-category-module",
         "features-glossary-home-module": "libs/features/glossary-home-module",
+        "startup-glossary-vue": {
+            "projectType": "application",
+            "root": "apps/startup-glossary-vue",
+            "sourceRoot": "apps/startup-glossary-vue/src",
+            "targets": {
+                "build": {
+                    "executor": "@nx-plus/vue:browser",
+                    "options": {
+                        "dest": "dist/apps/startup-glossary-vue",
+                        "index": "apps/startup-glossary-vue/public/index.html",
+                        "main": "apps/startup-glossary-vue/src/main.ts",
+                        "tsConfig": "apps/startup-glossary-vue/tsconfig.app.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "mode": "production",
+                            "filenameHashing": true,
+                            "productionSourceMap": true,
+                            "css": {
+                                "extract": true,
+                                "sourceMap": false
+                            }
+                        }
+                    }
+                },
+                "serve": {
+                    "executor": "@nx-plus/vue:dev-server",
+                    "options": {
+                        "browserTarget": "startup-glossary-vue:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "startup-glossary-vue:build:production"
+                        }
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["apps/startup-glossary-vue/**/*.{ts,tsx,vue}"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/startup-glossary-vue"],
+                    "options": {
+                        "jestConfig": "apps/startup-glossary-vue/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "startup-glossary-vue-e2e": {
+            "root": "apps/startup-glossary-vue-e2e",
+            "sourceRoot": "apps/startup-glossary-vue-e2e/src",
+            "projectType": "application",
+            "targets": {
+                "e2e": {
+                    "executor": "@nrwl/cypress:cypress",
+                    "options": {
+                        "cypressConfig": "apps/startup-glossary-vue-e2e/cypress.json",
+                        "tsConfig": "apps/startup-glossary-vue-e2e/tsconfig.e2e.json",
+                        "devServerTarget": "startup-glossary-vue:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "startup-glossary-vue:serve:production"
+                        }
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["apps/startup-glossary-vue-e2e/**/*.{js,ts}"]
+                    }
+                }
+            }
+        },
         "startup-glossary": "apps/startup-glossary",
         "startup-glossary-e2e": "apps/startup-glossary-e2e",
         "ui-modals": "libs/ui/modals",
         "util-directives": "libs/util/directives",
         "util-pipes": "libs/util/pipes"
+    },
+    "cli": {
+        "defaultCollection": "@nrwl/workspace"
     }
 }

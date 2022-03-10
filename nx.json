@@ -53,6 +53,8 @@
         "features-glossary-home-module": "libs/features/glossary-home-module",
         "startup-glossary": "apps/startup-glossary",
         "startup-glossary-e2e": "apps/startup-glossary-e2e",
+        "startup-glossary-vue": "apps/startup-glossary-vue",
+        "startup-glossary-vue-e2e": "apps/startup-glossary-vue-e2e",
         "ui-modals": "libs/ui/modals",
         "util-directives": "libs/util/directives",
         "util-pipes": "libs/util/pipes"
