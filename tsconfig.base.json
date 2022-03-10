@@ -23,6 +23,7 @@
             "@company-name/data-access/services": ["libs/data-access/services/src/index.ts"],
             "@company-name/features/glossary-category-module": ["libs/features/glossary-category-module/src/lib/glossary-category.module"],
             "@company-name/features/glossary-home-module": ["libs/features/glossary-home-module/src/lib/glossary-home.module"],
+            "@company-name/features/glossary-home-module-vue": ["libs/features/glossary-home-module-vue/src/index.ts"],
             "@company-name/ui/components": ["libs/ui/components/src/index.ts"],
             "@company-name/ui/modals": ["libs/ui/modals/src/index.ts"],
             "@company-name/util/directives": ["libs/util/directives/src/index.ts"],

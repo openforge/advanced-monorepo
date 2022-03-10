@@ -4,6 +4,29 @@
         "data-access-services": "libs/data-access/services",
         "features-glossary-category-module": "libs/features/glossary-category-module",
         "features-glossary-home-module": "libs/features/glossary-home-module",
+        "features-glossary-home-module-vue": {
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/features/glossary-home-module-vue/**/*.{ts,tsx,vue}"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/features/glossary-home-module-vue"],
+                    "options": {
+                        "jestConfig": "libs/features/glossary-home-module-vue/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "root": "libs/features/glossary-home-module-vue",
+            "sourceRoot": "libs/features/glossary-home-module-vue/src"
+        },
+        "startup-glossary": "apps/startup-glossary",
+        "startup-glossary-e2e": "apps/startup-glossary-e2e",
         "startup-glossary-vue": {
             "projectType": "application",
             "root": "apps/startup-glossary-vue",
@@ -82,8 +105,6 @@
                 }
             }
         },
-        "startup-glossary": "apps/startup-glossary",
-        "startup-glossary-e2e": "apps/startup-glossary-e2e",
         "ui-modals": "libs/ui/modals",
         "util-directives": "libs/util/directives",
         "util-pipes": "libs/util/pipes"
