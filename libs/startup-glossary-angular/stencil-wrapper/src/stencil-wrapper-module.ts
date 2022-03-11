@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { defineCustomElements } from 'component-library/loader';
+import { defineCustomElements } from 'stencil/loader';
 
 import { CategoryListItem, GlossaryTerm } from './directives/proxies';
 
