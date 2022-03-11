@@ -25,6 +25,27 @@
             "root": "libs/features/glossary-home-module-vue",
             "sourceRoot": "libs/features/glossary-home-module-vue/src"
         },
+        "features-glossary-category-module-vue": {
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/features/glossary-category-module-vue/**/*.{ts,tsx,vue}"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/features/glossary-category-module-vue"],
+                    "options": {
+                        "jestConfig": "libs/features/glossary-category-module-vue/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "root": "libs/features/glossary-category-module-vue",
+            "sourceRoot": "libs/features/glossary-category-module-vue/src"
+        },
         "startup-glossary": "apps/startup-glossary",
         "startup-glossary-e2e": "apps/startup-glossary-e2e",
         "startup-glossary-vue": {

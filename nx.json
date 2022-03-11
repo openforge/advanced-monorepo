@@ -54,6 +54,9 @@
         "features-glossary-home-module-vue": {
             "tags": []
         },
+        "features-glossary-category-module-vue": {
+            "tags": []
+        },
         "startup-glossary": "apps/startup-glossary",
         "startup-glossary-e2e": "apps/startup-glossary-e2e",
         "startup-glossary-vue": "apps/startup-glossary-vue",
