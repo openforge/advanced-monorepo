@@ -7,12 +7,12 @@
         </ion-header>
         <ion-content>
             <section>
-                <ion-img></ion-img>
+                <ion-img src="img/finance.svg"></ion-img>
                 <h2>You have learned</h2>
                 <h2><span>5</span> out of <span>10</span> Terms</h2>
                 <p>Tap "Learn New Term" to continue.</p>
-                <ion-button class="primary">Learn New Term</ion-button>
-                <ion-button class="secondary" fill="outline">What I've Learned</ion-button>
+                <ion-button>Learn New Term</ion-button>
+                <ion-button fill="outline">What I've Learned</ion-button>
             </section>
         </ion-content>
     </ion-page>
