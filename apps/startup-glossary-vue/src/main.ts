@@ -20,8 +20,12 @@ import App from './App.vue';
 import router from './router';
 
 // Bind the custom elements to the window object
-applyPolyfills().then(() => {
-    defineCustomElements();
+void applyPolyfills().then(() => {
+    void defineCustomElements();
 });
 
-createApp(App).use(IonicVue).use(router).mount('#app');
+const app = createApp(App).use(IonicVue).use(router);
+
+void router.isReady().then(() => {
+    app.mount('#app');
+});

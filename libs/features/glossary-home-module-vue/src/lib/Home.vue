@@ -12,7 +12,7 @@
                 <p>Select a category below to view its terms.</p>
             </section>
             <ion-list>
-                <category-list-item v-for="category in categories" v-bind:key="category.title" :category="category"></category-list-item>
+                <category-list-item v-for="category in categories" v-bind:key="category.title" :category="category" v-on:viewItemEvent="data => console.log(data)"></category-list-item>
             </ion-list>
         </ion-content>
     </ion-page>
@@ -21,9 +21,15 @@
 <script>
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList } from '@ionic/vue';
 import { defineComponent } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
     name: 'Home',
+    setup() {
+        return {
+            router: useRouter(),
+        };
+    },
     components: {
         IonContent,
         IonHeader,
@@ -64,3 +70,18 @@ export default defineComponent({
     },
 });
 </script>
+
+<style>
+ion-header ion-title {
+    text-align: center;
+}
+
+ion-content section h2,
+ion-content section p {
+    text-align: center;
+}
+
+ion-content ion-list {
+    padding: 0;
+}
+</style>

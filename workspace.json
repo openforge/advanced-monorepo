@@ -10,12 +10,16 @@
                 "lint": {
                     "executor": "@nrwl/linter:eslint",
                     "options": {
-                        "lintFilePatterns": ["libs/features/glossary-home-module-vue/**/*.{ts,tsx,vue}"]
+                        "lintFilePatterns": [
+                            "libs/features/glossary-home-module-vue/**/*.{ts,tsx,vue}"
+                        ]
                     }
                 },
                 "test": {
                     "executor": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/features/glossary-home-module-vue"],
+                    "outputs": [
+                        "coverage/libs/features/glossary-home-module-vue"
+                    ],
                     "options": {
                         "jestConfig": "libs/features/glossary-home-module-vue/jest.config.js",
                         "passWithNoTests": true
@@ -31,12 +35,16 @@
                 "lint": {
                     "executor": "@nrwl/linter:eslint",
                     "options": {
-                        "lintFilePatterns": ["libs/features/glossary-category-module-vue/**/*.{ts,tsx,vue}"]
+                        "lintFilePatterns": [
+                            "libs/features/glossary-category-module-vue/**/*.{ts,tsx,vue}"
+                        ]
                     }
                 },
                 "test": {
                     "executor": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/features/glossary-category-module-vue"],
+                    "outputs": [
+                        "coverage/libs/features/glossary-category-module-vue"
+                    ],
                     "options": {
                         "jestConfig": "libs/features/glossary-category-module-vue/jest.config.js",
                         "passWithNoTests": true
@@ -87,12 +95,16 @@
                 "lint": {
                     "executor": "@nrwl/linter:eslint",
                     "options": {
-                        "lintFilePatterns": ["apps/startup-glossary-vue/**/*.{ts,tsx,vue}"]
+                        "lintFilePatterns": [
+                            "apps/startup-glossary-vue/**/*.{ts,tsx,vue}"
+                        ]
                     }
                 },
                 "test": {
                     "executor": "@nrwl/jest:jest",
-                    "outputs": ["coverage/apps/startup-glossary-vue"],
+                    "outputs": [
+                        "coverage/apps/startup-glossary-vue"
+                    ],
                     "options": {
                         "jestConfig": "apps/startup-glossary-vue/jest.config.js",
                         "passWithNoTests": true
@@ -121,7 +133,9 @@
                 "lint": {
                     "executor": "@nrwl/linter:eslint",
                     "options": {
-                        "lintFilePatterns": ["apps/startup-glossary-vue-e2e/**/*.{js,ts}"]
+                        "lintFilePatterns": [
+                            "apps/startup-glossary-vue-e2e/**/*.{js,ts}"
+                        ]
                     }
                 }
             }
