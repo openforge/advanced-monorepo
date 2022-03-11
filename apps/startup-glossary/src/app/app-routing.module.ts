@@ -4,11 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
     {
         path: 'home',
-        loadChildren: () => import('@company-name/features/glossary-home-module').then(m => m.GlossaryHomeModule),
+        loadChildren: () => import('@company-name/startup-glossary-angular/feature-shell/home-module').then(m => m.HomeModule),
     },
     {
         path: 'category',
-        loadChildren: () => import('@company-name/features/glossary-category-module').then(m => m.GlossaryCategoryModule),
+        loadChildren: () => import('@company-name/startup-glossary-angular/feature-shell/category-module').then(m => m.CategoryModule),
     },
     {
         path: '',

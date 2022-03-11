@@ -1,5 +1,5 @@
-import { Category, NewTerm, PastTerm } from '@company-name/features/glossary-category-module-vue';
-import { Home } from '@company-name/features/glossary-home-module-vue';
+import { Category, NewTerm, PastTerm } from '@company-name/startup-glossary-vue/glossary-category-module';
+import { Home } from '@company-name/startup-glossary-vue/glossary-home-module';
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 

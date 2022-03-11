@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="Back"> </ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ categorySelected.title }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <glossary-term></glossary-term>
+    <glossary-term></glossary-term>
+    <glossary-term></glossary-term>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button (click)="scrollTop()">Scroll to Top</ion-button>
+</ion-footer>
