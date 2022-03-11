@@ -42,25 +42,25 @@ export default defineComponent({
         return {
             categories: [
                 {
-                    icon: './assets/icons/finance.svg',
+                    icon: 'img/finance.svg',
                     title: 'Finance',
                     termsLearned: 11,
                     termsTotal: 25,
                 },
                 {
-                    icon: './assets/icons/marketing.svg',
+                    icon: 'img/marketing.svg',
                     title: 'Marketing',
                     termsLearned: 5,
                     termsTotal: 25,
                 },
                 {
-                    icon: './assets/icons/business.svg',
+                    icon: 'img/business.svg',
                     title: 'Business',
                     termsLearned: 7,
                     termsTotal: 25,
                 },
                 {
-                    icon: './assets/icons/investing.svg',
+                    icon: 'img/investing.svg',
                     title: 'Investment',
                     termsLearned: 0,
                     termsTotal: 25,
