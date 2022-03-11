@@ -13,7 +13,7 @@ import '@ionic/vue/css/flex-utils.css';
 import '@ionic/vue/css/display.css';
 
 import { IonicVue } from '@ionic/vue';
-import { applyPolyfills, defineCustomElements } from 'component-library/loader';
+import { applyPolyfills, defineCustomElements } from 'stencil/loader';
 import { createApp } from 'vue';
 
 import App from './App.vue';
