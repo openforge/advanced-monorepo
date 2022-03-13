@@ -1,0 +1,28 @@
+{
+    "root": "apps/startup-glossary-angular-e2e",
+    "sourceRoot": "apps/startup-glossary-angular-e2e/src",
+    "projectType": "application",
+    "targets": {
+        "e2e": {
+            "executor": "@nrwl/cypress:cypress",
+            "options": {
+                "cypressConfig": "apps/startup-glossary-angular-e2e/cypress.json",
+                "devServerTarget": "startup-glossary-angular:serve:development"
+            },
+            "configurations": {
+                "production": {
+                    "devServerTarget": "startup-glossary-angular:serve:production"
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/startup-glossary-angular-e2e/**/*.{js,ts}"]
+            }
+        }
+    },
+    "tags": [],
+    "implicitDependencies": ["startup-glossary-angular"]
+}

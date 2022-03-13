@@ -46,7 +46,7 @@
             "style": "scss"
         }
     },
-    "defaultProject": "startup-glossary",
+    "defaultProject": "startup-glossary-angular",
     "projects": {
         "data-access-services": "libs/data-access/services",
         "startup-glossary-angular-category-module": "libs/startup-glossary-angular/feature-shell/category-module",
@@ -60,8 +60,8 @@
         "ui-modals": "libs/ui/modals",
         "util-directives": "libs/util/directives",
         "util-pipes": "libs/util/pipes",
-        "startup-glossary": "apps/startup-glossary",
-        "startup-glossary-e2e": "apps/startup-glossary-e2e",
+        "startup-glossary-angular": "apps/startup-glossary-angular",
+        "startup-glossary-angular-e2e": "apps/startup-glossary-angular-e2e",
         "startup-glossary-vue": "apps/startup-glossary-vue",
         "startup-glossary-vue-e2e": "apps/startup-glossary-vue-e2e"
     }

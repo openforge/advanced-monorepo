@@ -1,28 +1,22 @@
 {
     "projectType": "application",
-    "root": "apps/startup-glossary",
-    "sourceRoot": "apps/startup-glossary/src",
+    "root": "apps/startup-glossary-angular",
+    "sourceRoot": "apps/startup-glossary-angular/src",
     "prefix": "openforge-academy",
     "targets": {
         "build": {
             "executor": "@angular-devkit/build-angular:browser",
-            "outputs": [
-                "{options.outputPath}"
-            ],
+            "outputs": ["{options.outputPath}"],
             "options": {
                 "preserveSymlinks": true,
-                "outputPath": "dist/apps/startup-glossary",
-                "index": "apps/startup-glossary/src/index.html",
-                "main": "apps/startup-glossary/src/main.ts",
-                "polyfills": "apps/startup-glossary/src/polyfills.ts",
-                "tsConfig": "apps/startup-glossary/tsconfig.json",
+                "outputPath": "dist/apps/startup-glossary-angular",
+                "index": "apps/startup-glossary-angular/src/index.html",
+                "main": "apps/startup-glossary-angular/src/main.ts",
+                "polyfills": "apps/startup-glossary-angular/src/polyfills.ts",
+                "tsConfig": "apps/startup-glossary-angular/tsconfig.json",
                 "inlineStyleLanguage": "scss",
-                "assets": [
-                    "apps/startup-glossary/src/assets"
-                ],
-                "styles": [
-                    "apps/startup-glossary/src/global.scss"
-                ],
+                "assets": ["apps/startup-glossary-angular/src/assets"],
+                "styles": ["apps/startup-glossary-angular/src/global.scss"],
                 "scripts": []
             },
             "configurations": {
@@ -41,8 +35,8 @@
                     ],
                     "fileReplacements": [
                         {
-                            "replace": "apps/startup-glossary/src/environments/environment.ts",
-                            "with": "apps/startup-glossary/src/environments/environment.prod.ts"
+                            "replace": "apps/startup-glossary-angular/src/environments/environment.ts",
+                            "with": "apps/startup-glossary-angular/src/environments/environment.prod.ts"
                         }
                     ],
                     "outputHashing": "all"
@@ -62,10 +56,10 @@
             "executor": "@angular-devkit/build-angular:dev-server",
             "configurations": {
                 "production": {
-                    "browserTarget": "startup-glossary:build:production"
+                    "browserTarget": "startup-glossary-angular:build:production"
                 },
                 "development": {
-                    "browserTarget": "startup-glossary:build:development"
+                    "browserTarget": "startup-glossary-angular:build:development"
                 }
             },
             "defaultConfiguration": "development"
@@ -73,38 +67,28 @@
         "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-                "browserTarget": "startup-glossary:build"
+                "browserTarget": "startup-glossary-angular:build"
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": [
-                    "apps/startup-glossary/src/**/*.ts",
-                    "apps/startup-glossary/src/**/*.html"
-                ]
+                "lintFilePatterns": ["apps/startup-glossary-angular/src/**/*.ts", "apps/startup-glossary-angular/src/**/*.html"]
             }
         },
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": [
-                "coverage/apps/startup-glossary"
-            ],
+            "outputs": ["coverage/apps/startup-glossary-angular"],
             "options": {
-                "jestConfig": "apps/startup-glossary/jest.config.js",
+                "jestConfig": "apps/startup-glossary-angular/jest.config.js",
                 "passWithNoTests": true
             }
         },
         "stylelint": {
             "executor": "nx-stylelint:lint",
-            "outputs": [
-                "{options.outputFile}"
-            ],
+            "outputs": ["{options.outputFile}"],
             "options": {
-                "lintFilePatterns": [
-                    "apps/startup-glossary/**/*.css",
-                    "apps/startup-glossary/**/*.scss"
-                ]
+                "lintFilePatterns": ["apps/startup-glossary-angular/**/*.css", "apps/startup-glossary-angular/**/*.scss"]
             }
         }
     },
