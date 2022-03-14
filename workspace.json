@@ -2,12 +2,249 @@
     "version": 2,
     "projects": {
         "data-access-services": "libs/data-access/services",
-        "features-glossary-category-module": "libs/features/glossary-category-module",
-        "features-glossary-home-module": "libs/features/glossary-home-module",
-        "startup-glossary": "apps/startup-glossary",
-        "startup-glossary-e2e": "apps/startup-glossary-e2e",
+        "startup-glossary-angular": "apps/startup-glossary-angular",
+        "startup-glossary-angular-category-module": {
+            "0": "l",
+            "1": "i",
+            "2": "b",
+            "3": "s",
+            "4": "/",
+            "5": "f",
+            "6": "e",
+            "7": "a",
+            "8": "t",
+            "9": "u",
+            "10": "r",
+            "11": "e",
+            "12": "s",
+            "13": "/",
+            "14": "g",
+            "15": "l",
+            "16": "o",
+            "17": "s",
+            "18": "s",
+            "19": "a",
+            "20": "r",
+            "21": "y",
+            "22": "-",
+            "23": "c",
+            "24": "a",
+            "25": "t",
+            "26": "e",
+            "27": "g",
+            "28": "o",
+            "29": "r",
+            "30": "y",
+            "31": "-",
+            "32": "m",
+            "33": "o",
+            "34": "d",
+            "35": "u",
+            "36": "l",
+            "37": "e",
+            "root": "libs/startup-glossary-angular/feature-shell/category-module",
+            "sourceRoot": "libs/startup-glossary-angular/feature-shell/category-module/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/startup-glossary-angular/feature-shell/category-module/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/startup-glossary-angular/feature-shell/category-module"],
+                    "options": {
+                        "jestConfig": "libs/startup-glossary-angular/feature-shell/category-module/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "startup-glossary-angular-home-module": {
+            "0": "l",
+            "1": "i",
+            "2": "b",
+            "3": "s",
+            "4": "/",
+            "5": "f",
+            "6": "e",
+            "7": "a",
+            "8": "t",
+            "9": "u",
+            "10": "r",
+            "11": "e",
+            "12": "s",
+            "13": "/",
+            "14": "g",
+            "15": "l",
+            "16": "o",
+            "17": "s",
+            "18": "s",
+            "19": "a",
+            "20": "r",
+            "21": "y",
+            "22": "-",
+            "23": "h",
+            "24": "o",
+            "25": "m",
+            "26": "e",
+            "27": "-",
+            "28": "m",
+            "29": "o",
+            "30": "d",
+            "31": "u",
+            "32": "l",
+            "33": "e",
+            "root": "libs/startup-glossary-angular/feature-shell/home-module",
+            "sourceRoot": "libs/startup-glossary-angular/feature-shell/home-module/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/startup-glossary-angular/feature-shell/home-module/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/startup-glossary-angular/feature-shell/home-module"],
+                    "options": {
+                        "jestConfig": "libs/startup-glossary-angular/feature-shell/home-module/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "startup-glossary-angular-e2e": "apps/startup-glossary-angular-e2e",
+        "startup-glossary-vue": {
+            "projectType": "application",
+            "root": "apps/startup-glossary-vue",
+            "sourceRoot": "apps/startup-glossary-vue/src",
+            "targets": {
+                "build": {
+                    "executor": "@nx-plus/vue:browser",
+                    "options": {
+                        "dest": "dist/apps/startup-glossary-vue",
+                        "index": "apps/startup-glossary-vue/public/index.html",
+                        "main": "apps/startup-glossary-vue/src/main.ts",
+                        "tsConfig": "apps/startup-glossary-vue/tsconfig.app.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "mode": "production",
+                            "filenameHashing": true,
+                            "productionSourceMap": true,
+                            "css": {
+                                "extract": true,
+                                "sourceMap": false
+                            }
+                        }
+                    }
+                },
+                "serve": {
+                    "executor": "@nx-plus/vue:dev-server",
+                    "options": {
+                        "browserTarget": "startup-glossary-vue:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "startup-glossary-vue:build:production"
+                        }
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["apps/startup-glossary-vue/**/*.{ts,tsx,vue}"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/startup-glossary-vue"],
+                    "options": {
+                        "jestConfig": "apps/startup-glossary-vue/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "startup-glossary-vue-e2e": {
+            "root": "apps/startup-glossary-vue-e2e",
+            "sourceRoot": "apps/startup-glossary-vue-e2e/src",
+            "projectType": "application",
+            "targets": {
+                "e2e": {
+                    "executor": "@nrwl/cypress:cypress",
+                    "options": {
+                        "cypressConfig": "apps/startup-glossary-vue-e2e/cypress.json",
+                        "tsConfig": "apps/startup-glossary-vue-e2e/tsconfig.e2e.json",
+                        "devServerTarget": "startup-glossary-vue:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "startup-glossary-vue:serve:production"
+                        }
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["apps/startup-glossary-vue-e2e/**/*.{js,ts}"]
+                    }
+                }
+            }
+        },
+        "startup-glossary-vue-category-module": {
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/startup-glossary-vue/feature-shell/category-module/**/*.{ts,tsx,vue}"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/startup-glossary-vue/feature-shell/category-module"],
+                    "options": {
+                        "jestConfig": "libs/startup-glossary-vue/feature-shell/category-module/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "root": "libs/startup-glossary-vue/feature-shell/category-module",
+            "sourceRoot": "libs/startup-glossary-vue/feature-shell/category-module/src"
+        },
+        "startup-glossary-vue-home-module": {
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/startup-glossary-vue/feature-shell/home-module/**/*.{ts,tsx,vue}"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/startup-glossary-vue/feature-shell/home-module"],
+                    "options": {
+                        "jestConfig": "libs/startup-glossary-vue/feature-shell/home-module/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "root": "libs/startup-glossary-vue/feature-shell/home-module",
+            "sourceRoot": "libs/startup-glossary-vue/feature-shell/home-module/src"
+        },
         "ui-modals": "libs/ui/modals",
         "util-directives": "libs/util/directives",
         "util-pipes": "libs/util/pipes"
+    },
+    "cli": {
+        "defaultCollection": "@nrwl/workspace"
     }
 }

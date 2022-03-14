@@ -1,12 +1,14 @@
-import { Glossary } from '../../../models/src/lib/glossary.model';
-import { Category } from '../../../models/src/lib/category.model';
 import { CategoryType } from '@company-name/util/enums';
+
+import { Category } from '../../../models/src/lib/category.model';
+import { Glossary } from '../../../models/src/lib/glossary.model';
 
 export const GlossaryStaticData: Glossary = {
     entries: [
         {
             category: {
-                icon: 'assets/icons/marketing.svg',
+                id: '0',
+                icon: 'assets/marketing.svg',
                 title: CategoryType.Marketing,
                 termsLearned: 5,
                 termsTotal: 25,
@@ -21,7 +23,8 @@ export const GlossaryStaticData: Glossary = {
         },
         {
             category: {
-                icon: 'assets/icons/business.svg',
+                id: '1',
+                icon: '/assets/business.svg',
                 title: CategoryType.Business,
                 termsLearned: 7,
                 termsTotal: 25,
@@ -36,7 +39,8 @@ export const GlossaryStaticData: Glossary = {
         },
         {
             category: {
-                icon: 'assets/icons/investing.svg',
+                id: '2',
+                icon: 'assets/investing.svg',
                 title: CategoryType.Investment,
                 termsLearned: 0,
                 termsTotal: 25,
@@ -51,7 +55,8 @@ export const GlossaryStaticData: Glossary = {
         },
         {
             category: {
-                icon: 'assets/icons/finance.svg',
+                id: '3',
+                icon: 'assets/finance.svg',
                 title: CategoryType.Finance,
                 termsLearned: 11,
                 termsTotal: 25,
@@ -69,27 +74,31 @@ export const GlossaryStaticData: Glossary = {
 
 export const Categories: Category[] = [
     {
-        icon: 'assets/icons/finance.svg',
-        title: CategoryType.Finance,
-        termsLearned: 11,
-        termsTotal: 25,
-    },
-    {
-        icon: 'assets/icons/marketing.svg',
+        id: '0',
+        icon: 'assets/marketing.svg',
         title: CategoryType.Marketing,
         termsLearned: 5,
         termsTotal: 25,
     },
     {
-        icon: 'assets/icons/business.svg',
+        id: '1',
+        icon: 'assets/business.svg',
         title: CategoryType.Business,
         termsLearned: 7,
         termsTotal: 25,
     },
     {
-        icon: 'assets/icons/investing.svg',
+        id: '2',
+        icon: 'assets/investing.svg',
         title: CategoryType.Investment,
         termsLearned: 0,
+        termsTotal: 25,
+    },
+    {
+        id: '3',
+        icon: 'assets/finance.svg',
+        title: CategoryType.Finance,
+        termsLearned: 11,
         termsTotal: 25,
     },
 ];

@@ -46,15 +46,23 @@
             "style": "scss"
         }
     },
-    "defaultProject": "startup-glossary",
+    "defaultProject": "startup-glossary-angular",
     "projects": {
         "data-access-services": "libs/data-access/services",
-        "features-glossary-category-module": "libs/features/glossary-category-module",
-        "features-glossary-home-module": "libs/features/glossary-home-module",
-        "startup-glossary": "apps/startup-glossary",
-        "startup-glossary-e2e": "apps/startup-glossary-e2e",
+        "startup-glossary-angular-category-module": "libs/startup-glossary-angular/feature-shell/category-module",
+        "startup-glossary-angular-home-module": "libs/startup-glossary-angular/feature-shell/home-module",
+        "startup-glossary-vue-category-module": {
+            "tags": []
+        },
+        "startup-glossary-vue-home-module": {
+            "tags": []
+        },
         "ui-modals": "libs/ui/modals",
         "util-directives": "libs/util/directives",
-        "util-pipes": "libs/util/pipes"
+        "util-pipes": "libs/util/pipes",
+        "startup-glossary-angular": "apps/startup-glossary-angular",
+        "startup-glossary-angular-e2e": "apps/startup-glossary-angular-e2e",
+        "startup-glossary-vue": "apps/startup-glossary-vue",
+        "startup-glossary-vue-e2e": "apps/startup-glossary-vue-e2e"
     }
 }

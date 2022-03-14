@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="Back" icon=""> </ion-back-button>
+        </ion-buttons>
+        <ion-title mode="ios">{{ categorySelected.title }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <glossary-term></glossary-term>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button (click)="newTerm()">New Term</ion-button>
+</ion-footer>

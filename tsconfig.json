@@ -10,54 +10,26 @@
         "importHelpers": true,
         "target": "es2015",
         "module": "esnext",
-        "lib": [
-            "es2017",
-            "dom"
-        ],
+        "lib": ["es2017", "dom"],
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@company-name/data-access/glossary": [
-                "libs/data-access/glossary/src/index.ts"
-            ],
-            "@company-name/data-access/models": [
-                "libs/data-access/models/src/index.ts"
-            ],
-            "@company-name/data-access/services": [
-                "libs/data-access/services/src/index.ts"
-            ],
-            "@company-name/features/glossary-category-module": [
-                "libs/features/glossary-category-module/src/lib/glossary-category.module"
-            ],
-            "@company-name/features/glossary-home-module": [
-                "libs/features/glossary-home-module/src/lib/glossary-home.module"
-            ],
-            "@company-name/ui/components": [
-                "libs/ui/components/src/index.ts"
-            ],
-            "@company-name/ui/modals": [
-                "libs/ui/modals/src/index.ts"
-            ],
-            "@company-name/util/directives": [
-                "libs/util/directives/src/index.ts"
-            ],
-            "@company-name/util/enums": [
-                "libs/util/enums/src/index.ts"
-            ],
-            "@company-name/util/pipes": [
-                "libs/util/pipes/src/index.ts"
-            ],
-            "@company-name/component-library-angular": [
-                "libs/component-library-angular/src/index.ts"
-            ],
-            "@angular/*": [
-                "./node_modules/@angular/*"
-            ]
+            "@company-name/data-access/glossary": ["libs/data-access/glossary/src/index.ts"],
+            "@company-name/data-access/models": ["libs/data-access/models/src/index.ts"],
+            "@company-name/data-access/services": ["libs/data-access/services/src/index.ts"],
+            "@company-name/startup-glossary-angular/feature-shell/category-module": ["libs/startup-glossary-angular/feature-shell/category-module/src/lib/category.module"],
+            "@company-name/startup-glossary-angular/feature-shell/home-module": ["libs/startup-glossary-angular/feature-shell/home-module/src/lib/home.module"],
+            "@company-name/startup-glossary-vue/category-module": ["libs/startup-glossary-vue/feature-shell/category-module/src/index.ts"],
+            "@company-name/startup-glossary-vue/home-module": ["libs/startup-glossary-vue/feature-shell/home-module/src/index.ts"],
+            "@company-name/ui/components": ["libs/ui/components/src/index.ts"],
+            "@company-name/ui/modals": ["libs/ui/modals/src/index.ts"],
+            "@company-name/util/directives": ["libs/util/directives/src/index.ts"],
+            "@company-name/util/enums": ["libs/util/enums/src/index.ts"],
+            "@company-name/util/pipes": ["libs/util/pipes/src/index.ts"],
+            "@company-name/stencil-wrapper": ["libs/startup-glossary-angular/stencil-wrapper/src/index.ts"],
+            "@angular/*": ["./node_modules/@angular/*"]
         }
     },
-    "exclude": [
-        "node_modules",
-        "tmp"
-    ]
+    "exclude": ["node_modules", "tmp"]
 }
