@@ -75,30 +75,30 @@ export const GlossaryStaticData: Glossary = {
 export const Categories: Category[] = [
     {
         id: '0',
-        icon: 'assets/finance.svg',
-        title: CategoryType.Finance,
-        termsLearned: 11,
-        termsTotal: 25,
-    },
-    {
-        id: '1',
         icon: 'assets/marketing.svg',
         title: CategoryType.Marketing,
         termsLearned: 5,
         termsTotal: 25,
     },
     {
-        id: '2',
+        id: '1',
         icon: 'assets/business.svg',
         title: CategoryType.Business,
         termsLearned: 7,
         termsTotal: 25,
     },
     {
-        id: '3',
+        id: '2',
         icon: 'assets/investing.svg',
         title: CategoryType.Investment,
         termsLearned: 0,
+        termsTotal: 25,
+    },
+    {
+        id: '3',
+        icon: 'assets/finance.svg',
+        title: CategoryType.Finance,
+        termsLearned: 11,
         termsTotal: 25,
     },
 ];

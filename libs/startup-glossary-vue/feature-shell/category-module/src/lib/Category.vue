@@ -2,6 +2,9 @@
     <ion-page>
         <ion-header>
             <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-back-button></ion-back-button>
+                </ion-buttons>
                 <ion-title>{{ category.title }}</ion-title>
             </ion-toolbar>
         </ion-header>
@@ -21,7 +24,7 @@
 </template>
 
 <script>
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonImg } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonImg, IonBackButton } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { Categories } from '@company-name/data-access/glossary';
@@ -45,6 +48,7 @@ export default defineComponent({
         IonToolbar,
         IonButton,
         IonImg,
+        IonBackButton,
     },
 });
 </script>
@@ -60,6 +64,10 @@ ion-header ion-toolbar {
 
 ion-header ion-toolbar ion-title {
     --color: #ffffff;
+}
+
+ion-header ion-back-button {
+    color: white;
 }
 
 ion-content section {
