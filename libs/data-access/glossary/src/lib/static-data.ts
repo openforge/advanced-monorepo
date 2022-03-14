@@ -24,7 +24,7 @@ export const GlossaryStaticData: Glossary = {
         {
             category: {
                 id: '1',
-                icon: 'assets/business.svg',
+                icon: '/assets/business.svg',
                 title: CategoryType.Business,
                 termsLearned: 7,
                 termsTotal: 25,

@@ -3,14 +3,14 @@
         <ion-header>
             <ion-toolbar>
                 <ion-buttons slot="start">
-                    <ion-back-button></ion-back-button>
+                    <ion-back-button text="Back" icon=""> </ion-back-button>
                 </ion-buttons>
-                <ion-title>{{ category.title }}</ion-title>
+                <ion-title mode="ios">{{ category.title }}</ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content>
             <section>
-                <ion-img :src="category.icon"></ion-img>
+                <ion-img :src="`/${category.icon}`"></ion-img>
                 <h2>You have learned</h2>
                 <h2>
                     <span>{{ category.termsLearned }}</span> out of <span>{{ category.termsTotal }}</span> Terms
@@ -25,7 +25,7 @@
 
 <script>
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonImg, IonBackButton } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { Categories } from '@company-name/data-access/glossary';
 

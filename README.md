@@ -1,6 +1,7 @@
-# OpenForge Ionic Monorepo Example
+# OpenForge Advanced Monorepo
 
-This is a template project for all Ionic + Angular Monorepos.   
+This is an exmaple repository that contains an Angular and Vue project. In addition, each project contains a shared stencil component.
+
 It was generated using a combination of [Nx](https://nx.dev), Ionic [Thanks to Eric Jeker's Post on Ionic + Nrwl](https://medium.com/@eric.jeker/how-to-integrate-ionic-in-nrwl-nx-3493fcb7e85e), [StyleLint](https://stylelint.io/), and [ESLint](https://eslint.org/).
 
 # Instructions
@@ -10,9 +11,9 @@ It was generated using a combination of [Nx](https://nx.dev), Ionic [Thanks to E
 3. Search + Replace all instances of 'example-app' with your app name
 4. Change the folder names for example-app and example-app-e2e to what you named for steps #1 and #2
 5. Search + Replace all instances of 'openforge-ionic-monorepo-example' with your project name
-6. Search + Replace 'company-name' with your company name.  This is the NX project scope that allows you to import libraries using @company-name
+6. Search + Replace 'company-name' with your company name. This is the NX project scope that allows you to import libraries using @company-name
 
-That's it for the renaming!  Now to test...
+That's it for the renaming! Now to test...
 
 7. npm install
 8. npx nx run example-app:serve (where example-app is the name you replaced with above)
@@ -21,7 +22,7 @@ You should now load your example app!
 
 # Important - Utilizing this Repo
 
-Most of the commands to generate projects/capabilities/apps are default to NX, Ionic, or Angular (in that order), so we will NOT include their specific instructions since as the packages update so will the documentation.  
+Most of the commands to generate projects/capabilities/apps are default to NX, Ionic, Angular (in that order), so we will NOT include their specific instructions since as the packages update so will the documentation.
 
 With that said, there are some special things to keep in mind...
 
@@ -33,7 +34,7 @@ nx g nx-stylelint:configuration --project <projectName>
 
 ## Generate an application
 
-The normal NX command to generate an app is `nx g @nrwl/react:app my-app` ; however, there are some special steps to generate an Ionic App.  These are defined well in [Eric Jeker's post here](https://medium.com/@eric.jeker/how-to-integrate-ionic-in-nrwl-nx-3493fcb7e85e)
+The normal NX command to generate an app is `nx g @nrwl/react:app my-app` ; however, there are some special steps to generate an Ionic App. These are defined well in [Eric Jeker's post here](https://medium.com/@eric.jeker/how-to-integrate-ionic-in-nrwl-nx-3493fcb7e85e)
 
 When using Nx, you can create multiple applications and libraries in the same workspace.
 
@@ -78,4 +79,3 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 ## Understand your workspace
 
 Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
