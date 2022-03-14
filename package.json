@@ -4,6 +4,8 @@
     "license": "MIT",
     "scripts": {
         "start": "nx serve",
+        "start:angular": "npx nx serve --project startup-glossary-angular",
+        "start:vue": "npx nx serve --project startup-glossary-vue",
         "build": "nx build",
         "test": "nx test",
         "postinstall": "node node_modules/@nx-plus/vue/patch-nx-dep-graph.js",

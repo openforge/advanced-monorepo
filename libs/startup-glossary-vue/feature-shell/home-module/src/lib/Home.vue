@@ -12,7 +12,7 @@
                 <p>Select a category below to view its terms.</p>
             </section>
             <ion-list>
-                <category-list-item @click="router.push('/category')" v-for="category in categories" v-bind:key="category.title" :category="category"></category-list-item>
+                <category-list-item @click="router.push('/category/' + category.id)" v-for="category in categories" v-bind:key="category.title" :category="category"></category-list-item>
             </ion-list>
         </ion-content>
     </ion-page>

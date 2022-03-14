@@ -2,7 +2,7 @@
     <ion-page>
         <ion-header>
             <ion-toolbar>
-                <ion-title>CATEGORY</ion-title>
+                <ion-title>{{ category.title }}</ion-title>
             </ion-toolbar>
         </ion-header>
 
@@ -21,12 +21,17 @@
 <script>
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonButton } from '@ionic/vue';
 import { defineComponent } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
+import { Categories } from '@company-name/data-access/glossary';
 
 export default defineComponent({
     name: 'PastTerm',
     setup() {
+        const route = useRoute();
+        const { idCategory } = route.params;
+        const category = Categories.find(c => c.id === idCategory);
         return {
+            category,
             router: useRouter(),
         };
     },

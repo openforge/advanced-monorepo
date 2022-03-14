@@ -2,17 +2,19 @@
     <ion-page>
         <ion-header>
             <ion-toolbar>
-                <ion-title>Category</ion-title>
+                <ion-title>{{ category.title }}</ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content>
             <section>
-                <ion-img src="img/finance.svg"></ion-img>
+                <ion-img :src="category.icon"></ion-img>
                 <h2>You have learned</h2>
-                <h2><span>5</span> out of <span>10</span> Terms</h2>
+                <h2>
+                    <span>{{ category.termsLearned }}</span> out of <span>{{ category.termsTotal }}</span> Terms
+                </h2>
                 <p>Tap "Learn New Term" to continue.</p>
-                <ion-button @click="router.push('/new-term')" class="primary">Learn New Term</ion-button>
-                <ion-button @click="router.push('/past-term')" class="secondary" fill="outline">What I've Learned</ion-button>
+                <ion-button @click="router.push('/new-term/' + category.id)" class="primary">Learn New Term</ion-button>
+                <ion-button @click="router.push('/past-term/' + category.id)" class="secondary" fill="outline">What I've Learned</ion-button>
             </section>
         </ion-content>
     </ion-page>
@@ -21,12 +23,17 @@
 <script>
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonImg } from '@ionic/vue';
 import { defineComponent } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
+import { Categories } from '@company-name/data-access/glossary';
 
 export default defineComponent({
     name: 'Category',
     setup() {
+        const route = useRoute();
+        const { idCategory } = route.params;
+        const category = Categories.find(c => c.id === idCategory);
         return {
+            category,
             router: useRouter(),
         };
     },

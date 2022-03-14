@@ -10,17 +10,17 @@ const routes: Array<RouteRecordRaw> = [
         component: Home,
     },
     {
-        path: '/category',
+        path: '/category/:idCategory',
         name: 'Category',
         component: Category,
     },
     {
-        path: '/new-term',
+        path: '/new-term/:idCategory',
         name: 'NewTerm',
         component: NewTerm,
     },
     {
-        path: '/past-term',
+        path: '/past-term/:idCategory',
         name: 'PastTerm',
         component: PastTerm,
     },
