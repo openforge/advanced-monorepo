@@ -2,7 +2,7 @@
     <ion-page>
         <ion-header>
             <ion-toolbar>
-                <ion-title>CATEGORY</ion-title>
+                <ion-title>Category</ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content>
@@ -11,8 +11,8 @@
                 <h2>You have learned</h2>
                 <h2><span>5</span> out of <span>10</span> Terms</h2>
                 <p>Tap "Learn New Term" to continue.</p>
-                <ion-button>Learn New Term</ion-button>
-                <ion-button fill="outline">What I've Learned</ion-button>
+                <ion-button class="primary">Learn New Term</ion-button>
+                <ion-button class="secondary" fill="outline">What I've Learned</ion-button>
             </section>
         </ion-content>
     </ion-page>
@@ -49,6 +49,10 @@ ion-header ion-title {
 
 ion-header ion-toolbar {
     --background: var(--ion-color-pink);
+}
+
+ion-header ion-toolbar ion-title {
+    --color: #ffffff;
 }
 
 ion-content section {
