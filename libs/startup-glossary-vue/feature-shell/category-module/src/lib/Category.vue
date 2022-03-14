@@ -11,8 +11,8 @@
                 <h2>You have learned</h2>
                 <h2><span>5</span> out of <span>10</span> Terms</h2>
                 <p>Tap "Learn New Term" to continue.</p>
-                <ion-button class="primary">Learn New Term</ion-button>
-                <ion-button class="secondary" fill="outline">What I've Learned</ion-button>
+                <ion-button @click="router.push('/new-term')" class="primary">Learn New Term</ion-button>
+                <ion-button @click="router.push('/past-term')" class="secondary" fill="outline">What I've Learned</ion-button>
             </section>
         </ion-content>
     </ion-page>
