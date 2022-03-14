@@ -12,7 +12,7 @@
                 <p>Select a category below to view its terms.</p>
             </section>
             <ion-list>
-                <category-list-item v-for="category in categories" v-bind:key="category.title" :category="category" v-on:viewItemEvent="data => console.log(data)"></category-list-item>
+                <category-list-item @click="router.push({ name: '/category', id: category.id })" v-for="category in categories" v-bind:key="category.title" :category="category"></category-list-item>
             </ion-list>
         </ion-content>
     </ion-page>
@@ -22,13 +22,13 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
+import { Categories } from '@company-name/data-access/glossary';
 
 export default defineComponent({
     name: 'Home',
     setup() {
-        return {
-            router: useRouter(),
-        };
+        const router = useRouter();
+        return { router };
     },
     components: {
         IonContent,
@@ -40,32 +40,7 @@ export default defineComponent({
     },
     data() {
         return {
-            categories: [
-                {
-                    icon: 'img/finance.svg',
-                    title: 'Finance',
-                    termsLearned: 11,
-                    termsTotal: 25,
-                },
-                {
-                    icon: 'img/marketing.svg',
-                    title: 'Marketing',
-                    termsLearned: 5,
-                    termsTotal: 25,
-                },
-                {
-                    icon: 'img/business.svg',
-                    title: 'Business',
-                    termsLearned: 7,
-                    termsTotal: 25,
-                },
-                {
-                    icon: 'img/investing.svg',
-                    title: 'Investment',
-                    termsLearned: 0,
-                    termsTotal: 25,
-                },
-            ],
+            categories: Categories,
         };
     },
 });

@@ -10,4 +10,17 @@
  *
  * https://cli.vuejs.org/config/#configurewebpack
  */
-module.exports = config => {};
+module.exports = config => {
+    const vueRule = config.module.rules.find(rule => rule.test.exec('.vue'));
+    for (const use of vueRule.use) {
+        if (use.loader.includes('vue-loader')) {
+            const vueLoader = use;
+            if (vueLoader.options.compilerOptions) {
+                vueLoader.options.compilerOptions.isCustomElement = tag => tag.startsWith('glossary-') || tag.startsWith('category-');
+            } else {
+                vueLoader.options.compilerOptions = {};
+                vueLoader.options.compilerOptions.isCustomElement = tag => tag.startsWith('glossary-') || tag.startsWith('category-');
+            }
+        }
+    }
+};

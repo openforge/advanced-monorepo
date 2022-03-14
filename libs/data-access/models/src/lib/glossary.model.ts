@@ -1,11 +1,5 @@
-import { Definition } from './definition.model';
-import { Category } from './category.model';
+import { GlossaryEntry } from './glossary-entry.model';
 
 export class Glossary {
     entries: GlossaryEntry[];
-}
-
-export class GlossaryEntry {
-    category: Category;
-    definition: Definition;
 }
