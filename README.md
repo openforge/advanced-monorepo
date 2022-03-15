@@ -1,30 +1,18 @@
 # OpenForge Advanced Monorepo
 
-This is an exmaple repository that contains an Angular and Vue project. In addition, each project contains a shared stencil component.
+This is an example repository that contains an Angular and Vue project. In addition, each project contains a shared Stencil component.
 
 It was generated using a combination of [Nx](https://nx.dev), Ionic [Thanks to Eric Jeker's Post on Ionic + Nrwl](https://medium.com/@eric.jeker/how-to-integrate-ionic-in-nrwl-nx-3493fcb7e85e), [StyleLint](https://stylelint.io/), and [ESLint](https://eslint.org/).
 
 # Instructions
 
 1. Clone the repository using 'Use template' (and don't forget to give us a Star / Follow on Github, please!)
-2. Search + Replace all instances of 'example-app-e2e' with your app name (important to do this first)
-3. Search + Replace all instances of 'example-app' with your app name
-4. Change the folder names for example-app and example-app-e2e to what you named for steps #1 and #2
-5. Search + Replace all instances of 'openforge-ionic-monorepo-example' with your project name
-6. Search + Replace 'company-name' with your company name. This is the NX project scope that allows you to import libraries using @company-name
+2. npm install
+3. npx nx run startup-glossary-angular:serve AND/OR npx nx run startup-glossary-vue:serve
 
-That's it for the renaming! Now to test...
+You should now load your app(s)!
 
-7. npm install
-8. npx nx run example-app:serve (where example-app is the name you replaced with above)
-
-You should now load your example app!
-
-# Important - Utilizing this Repo
-
-Most of the commands to generate projects/capabilities/apps are default to NX, Ionic, Angular (in that order), so we will NOT include their specific instructions since as the packages update so will the documentation.
-
-With that said, there are some special things to keep in mind...
+Note: You can re-name the NX project scope ... to do this search + replace 'company-name' with your company name. This is the NX project scope that allows you to import libraries using @company-name.
 
 ## Generating a Project - Additional Step
 
