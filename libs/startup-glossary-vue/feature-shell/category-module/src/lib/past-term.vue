@@ -3,9 +3,9 @@
         <ion-header>
             <ion-toolbar>
                 <ion-buttons slot="start">
-                    <ion-back-button></ion-back-button>
+                    <ion-back-button text="Back" icon=""> </ion-back-button>
                 </ion-buttons>
-                <ion-title>{{ category.title }}</ion-title>
+                <ion-title mode="ios">{{ category.title }}</ion-title>
             </ion-toolbar>
         </ion-header>
 
@@ -75,5 +75,9 @@ ion-footer {
 }
 ion-footer ion-button {
     width: 200px;
+}
+
+.footer-md::before {
+    background-image: none;
 }
 </style>

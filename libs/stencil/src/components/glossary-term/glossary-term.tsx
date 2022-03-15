@@ -16,7 +16,7 @@ export class GlossaryTermComponent {
             <section>
                 <h2>Net Worth</h2>
                 <p>
-                    <strong>[ net wurth ]</strong>
+                    <strong>[ net worth ]</strong>
                 </p>
                 <p>The total wealth of an individual, company or household, taking account of all financial assets and liabilities.</p>
                 <p>

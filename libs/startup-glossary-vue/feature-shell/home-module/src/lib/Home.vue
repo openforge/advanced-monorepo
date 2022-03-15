@@ -2,7 +2,7 @@
     <ion-page>
         <ion-header>
             <ion-toolbar>
-                <ion-title>Startup Glossary</ion-title>
+                <ion-title mode="ios">Startup Glossary</ion-title>
             </ion-toolbar>
         </ion-header>
 
@@ -48,7 +48,8 @@ export default defineComponent({
 
 <style>
 ion-header ion-title {
-    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 ion-content section h2,

@@ -11,9 +11,10 @@ ion-header ion-title {
 
 ion-header ion-toolbar {
     --background: var(--ion-color-pink);
+    --color: #ffffff;
 
     ion-back-button {
-        color: white;
+        color: #ffffff;
     }
 }
 

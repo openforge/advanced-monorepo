@@ -8,6 +8,15 @@ ion-header ion-title {
     text-align: center;
 }
 
+ion-header ion-toolbar {
+    --background: var(--ion-color-pink);
+    --color: #ffffff;
+
+    ion-back-button {
+        color: #ffffff;
+    }
+}
+
 ion-content section {
     padding: 24px;
 
